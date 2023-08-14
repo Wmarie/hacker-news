@@ -1,0 +1,12 @@
+C:\Projekter\Test\HackerNewsApp\HackerNewsApp\Shared\bin\Debug\net6.0\HackerNewsApp.Shared.deps.json
+C:\Projekter\Test\HackerNewsApp\HackerNewsApp\Shared\bin\Debug\net6.0\HackerNewsApp.Shared.dll
+C:\Projekter\Test\HackerNewsApp\HackerNewsApp\Shared\bin\Debug\net6.0\HackerNewsApp.Shared.pdb
+C:\Projekter\Test\HackerNewsApp\HackerNewsApp\Shared\obj\Debug\net6.0\HackerNewsApp.Shared.csproj.AssemblyReference.cache
+C:\Projekter\Test\HackerNewsApp\HackerNewsApp\Shared\obj\Debug\net6.0\HackerNewsApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projekter\Test\HackerNewsApp\HackerNewsApp\Shared\obj\Debug\net6.0\HackerNewsApp.Shared.AssemblyInfoInputs.cache
+C:\Projekter\Test\HackerNewsApp\HackerNewsApp\Shared\obj\Debug\net6.0\HackerNewsApp.Shared.AssemblyInfo.cs
+C:\Projekter\Test\HackerNewsApp\HackerNewsApp\Shared\obj\Debug\net6.0\HackerNewsApp.Shared.csproj.CoreCompileInputs.cache
+C:\Projekter\Test\HackerNewsApp\HackerNewsApp\Shared\obj\Debug\net6.0\HackerNewsApp.Shared.dll
+C:\Projekter\Test\HackerNewsApp\HackerNewsApp\Shared\obj\Debug\net6.0\refint\HackerNewsApp.Shared.dll
+C:\Projekter\Test\HackerNewsApp\HackerNewsApp\Shared\obj\Debug\net6.0\HackerNewsApp.Shared.pdb
+C:\Projekter\Test\HackerNewsApp\HackerNewsApp\Shared\obj\Debug\net6.0\ref\HackerNewsApp.Shared.dll

@@ -1,0 +1,55 @@
+﻿@page "/stories"
+@using HackerNewsApp.Shared
+@inject HttpClient Http
+
+<PageTitle>Random stories</PageTitle>
+
+
+@if (stories == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div class="container d-flex flex-wrap  gap-3">
+
+        @foreach (var story in stories)
+        {
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">@story.Title</h5>
+                    <a href="@story.Url">@story.Url</a>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">@story.Time</li>
+                    <li class="list-group-item">@story.Score</li>
+                    <li class="list-group-item">@story.User.Id, @story.User.Karma</li>
+                </ul>
+                <div class="card-body text-end">
+                    <button type="button" class="btn btn-secondary" @onclick="() => DeleteAsync(story.Id)">slet</button>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    private IList<Story>? stories;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await ReloadStories();
+    }
+    private async Task DeleteAsync(int id)
+    {
+        var res = await Http.DeleteAsync($"Story/{id}");
+        await ReloadStories();
+
+    }
+
+    private async Task ReloadStories()
+    {
+        stories = await Http.GetFromJsonAsync<IList<Story>>("Story/random/10");
+
+    }
+}
