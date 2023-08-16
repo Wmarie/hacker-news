@@ -30,7 +30,7 @@ namespace HackerNews.Controllers
                 story.User = await _httpClient.GetFromJsonAsync<User>($"https://hacker-news.firebaseio.com/v0/user/{story.By}.json");
                 lst.Add(story);
             }
-            return Ok(lst.OrderBy(x => x.Score).ToList());
+            return Ok(lst.OrderByDescending(x => x.Score).ToList());
 
         }
  

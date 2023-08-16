@@ -1,0 +1,12 @@
+﻿.card {
+    width: 18rem;
+}
+
+.card-title {
+    height: 8rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}

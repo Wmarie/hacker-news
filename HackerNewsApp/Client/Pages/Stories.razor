@@ -15,18 +15,21 @@ else
 
         @foreach (var story in stories)
         {
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">@story.Title</h5>
-                    <a href="@story.Url">@story.Url</a>
+            <div class="card">
+                <div class="card-body d-flex flex-column align-content-between">
+                    <h5 class="card-title">
+                        <a href="@story.Url"> @story.Title</a>
+                    </h5>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">@story.Time</li>
-                    <li class="list-group-item">@story.Score</li>
-                    <li class="list-group-item">@story.User.Id, @story.User.Karma</li>
+                    <li class="list-group-item">Story score is <strong>@story.Score</strong> </li>
+                    <li class="list-group-item">
+                        @(DateTimeOffset.FromUnixTimeSeconds(story.Time).DateTime)
+                    </li>
+                    <li class="list-group-item">By <strong>@story.User.Id</strong>, karma <strong> @story.User.Karma</strong></li>
                 </ul>
                 <div class="card-body text-end">
-                    <button type="button" class="btn btn-secondary" @onclick="() => DeleteAsync(story.Id)">slet</button>
+                    <button type="button" class="btn btn-outline-danger w-100" @onclick="() => DeleteAsync(story.Id)">slet</button>
                 </div>
             </div>
         }
